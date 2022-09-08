@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
+import Card2 from './components/Card/Card2'
+// import Card2 from './components/Card2/Card2'
 
+const HotelFactory = (title) => ({
+  title: 'Hotel 1',
+  details: 'Details',
+  tag: 'New',
+  price: '$1240/night',
+  rating: '4.88'
+})
 function App() {
+  console.log("🚀 ~ file: App.js ~ line 13 ~ HotelFactory ~ HotelFactory", HotelFactory())
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Card2 hotel={HotelFactory()} />
+        <Card2 hotel={HotelFactory()} />
+        <Card2 hotel={HotelFactory()} />
+        <Card2 hotel={HotelFactory()} />
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
