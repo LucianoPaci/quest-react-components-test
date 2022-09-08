@@ -13,9 +13,9 @@
 **********************************************************************/
 
 import React from 'react';
-import MoonbaseLogoImage from 'src/assets/images/MoonbaseLogo.png';
-import MoonbaseLogoMImage from 'src/assets/images/MoonbaseLogo_M.png';
-import Avatar1Image from 'src/assets/images/Avatar.png';
+import MoonbaseLogoImage from './assets/images/MoonbaseLogo.png';
+import MoonbaseLogoMImage from './assets/images/MoonbaseLogo_M.png';
+import Avatar1Image from './assets/images/Avatar.png';
 import { styled } from '@mui/material/styles';
 import SidebarRow4 from './SidebarRow4';
 

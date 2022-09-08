@@ -14,7 +14,7 @@
 
 import React from 'react';
 import { Tooltip, Button } from '@mui/material';
-import StarImage from 'src/assets/images/star_1.png';
+import StarImage from './assets/images/star_1.png';
 import { styled } from '@mui/material/styles';
 import useCard2 from './useCard2';
  
