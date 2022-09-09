@@ -1,6 +1,9 @@
 import logo from './logo.svg'
 import './App.css'
 import Card2 from './components/Card/Card2'
+import Layout from './components/Layout'
+import { Routes, Route } from 'react-router-dom'
+import { Grid } from '@mui/material'
 // import Card2 from './components/Card2/Card2'
 
 const HotelFactory = (title) => ({
@@ -8,18 +11,38 @@ const HotelFactory = (title) => ({
   details: 'Details',
   tag: 'New',
   price: '$1240/night',
-  rating: '4.88'
+  rating: '4.88',
 })
+
 function App() {
-  console.log("🚀 ~ file: App.js ~ line 13 ~ HotelFactory ~ HotelFactory", HotelFactory())
   return (
     <div className="App">
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Card2 hotel={HotelFactory()} />
-        <Card2 hotel={HotelFactory()} />
-        <Card2 hotel={HotelFactory()} />
-        <Card2 hotel={HotelFactory()} />
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route
+            index
+            element={
+              <Grid container spacing={2} m={4}>
+                <Grid item>
+                  <Card2 hotel={HotelFactory()} />
+                </Grid>
+                <Grid item>
+                  <Card2 hotel={HotelFactory()} />
+                </Grid>
+                <Grid item>
+                  <Card2 hotel={HotelFactory()} />
+                </Grid>
+                <Grid item>
+                  <Card2 hotel={HotelFactory()} />
+                </Grid>
+                <Grid item>
+                  <Card2 hotel={HotelFactory()} />
+                </Grid>
+              </Grid>
+            }
+          />
+        </Route>
+      </Routes>
     </div>
   )
 }
